@@ -103,10 +103,10 @@ console.log(totalDonation);
 let donationTotal = [];
 console.log(donationTotal);
 
-const totalDonation = runners.filter(function(value){
+const totalDonations = runners.filter(function(value){
     return value.donation > 200;
 });
-console.log(totalDonation);
+console.log(totalDonations);
 
 // If they donated more than 200 they get to start the race at the front.
 
