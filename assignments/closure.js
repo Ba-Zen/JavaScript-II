@@ -1,7 +1,14 @@
 // ==== Challenge 1: Write your own closure ====
 // Write a simple closure of your own creation.  Keep it simple!
+function state(){
+  console.log("I see trees");
 
-
+  function city(){
+    console.log("I see skyscrapers");
+  }
+  city();
+}
+state();
 /* STRETCH PROBLEMS, Do not attempt until you have completed all previous tasks for today's project files */
 
 
