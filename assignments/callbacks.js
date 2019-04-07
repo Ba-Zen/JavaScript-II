@@ -39,7 +39,7 @@ function last(arr, cb) {
   // last passes the last item of the array into the callback. 
 }
 function last(arr, cb){
-  return cb(arr[3], cb);
+  return cb(arr[arr.length - 1]);
 }
 last(items, function(last) {
   console.log(last)
@@ -68,9 +68,21 @@ console.log(multiplyNums(2,4,multiply));
 function contains(item, list, cb) {
   // contains checks if an item is present inside of the given array/list.
   // Pass true to the callback if it is, otherwise pass false.
+  for(let i = 0; i < list.length; i++){
+    if(list[i] === item){
+      return cb(true);
+    }
+  }
+  return cb(false);
 }
-  console.log(items.includes('Notebook'));
-  console.log(items.includes('Pokemon Folder'));
+
+contains('Notebook', items, function(flag){
+  console.log(flag);
+});
+contains('Pokemon Folder', items, function(flag){
+  console.log(flag);
+});
+ 
 
 /* STRETCH PROBLEM */
 
